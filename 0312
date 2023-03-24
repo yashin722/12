@@ -7,3 +7,460 @@ def test_celsius_to_fahrenheit():
     assert celsius_to_fahrenheit(100) == 212
     assert celsius_to_fahrenheit(-40) == -40
     
+Last login: Mon Mar 20 13:05:48 on ttys000
+-bash: /Users/owner/.profile: line 1: syntax error near unexpected token `('
+-bash: /Users/owner/.profile: line 1: `==> Checking for `sudo` access (which may request your password)...'
+
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+Owner-no-MacBook-Air:~ owner$ pip install pygame
+-bash: pip: command not found
+Owner-no-MacBook-Air:~ owner$ import sys
+-bash: import: command not found
+Owner-no-MacBook-Air:~ owner$ import pygame
+-bash: import: command not found
+Owner-no-MacBook-Air:~ owner$ 
+Owner-no-MacBook-Air:~ owner$ # ゲームの初期設定
+Owner-no-MacBook-Air:~ owner$ pygame.init()
+> screen = pygame.display.set_mode((800, 600))
+-bash: syntax error near unexpected token `screen'
+Owner-no-MacBook-Air:~ owner$ pygame.display.set_caption('ブロック崩し')
+-bash: syntax error near unexpected token `'ブロック崩し''
+Owner-no-MacBook-Air:~ owner$ 
+Owner-no-MacBook-Air:~ owner$ # ゲームループ
+Owner-no-MacBook-Air:~ owner$ running = True
+-bash: running: command not found
+Owner-no-MacBook-Air:~ owner$ while running:
+>     for event in pygame.event.get():
+-bash: syntax error near unexpected token `('
+Owner-no-MacBook-Air:~ owner$         if event.type == pygame.QUIT:
+>             running = False
+> 
+>     # ここにゲームの処理を追加
+> 
+>     pygame.display.flip()
+> 
+> pygame.quit()
+-bash: syntax error near unexpected token `pygame.quit'
+Owner-no-MacBook-Air:~ owner$ sys.exit()
+> import sys
+-bash: syntax error near unexpected token `import'
+Owner-no-MacBook-Air:~ owner$ import pygame
+-bash: import: command not found
+Owner-no-MacBook-Air:~ owner$ import random
+-bash: import: command not found
+Owner-no-MacBook-Air:~ owner$ 
+Owner-no-MacBook-Air:~ owner$ # 初期設定
+Owner-no-MacBook-Air:~ owner$ pygame.init()
+> screen = pygame.display.set_mode((800, 600))
+-bash: syntax error near unexpected token `screen'
+Owner-no-MacBook-Air:~ owner$ pygame.display.set_caption('オリジナルブロック崩し')
+-bash: syntax error near unexpected token `'オリジナルブロック崩し''
+Owner-no-MacBook-Air:~ owner$ clock = pygame.time.Clock()
+-bash: syntax error near unexpected token `('
+Owner-no-MacBook-Air:~ owner$ 
+Owner-no-MacBook-Air:~ owner$ # ブロック、ボール、パドルの表示と移動
+Owner-no-MacBook-Air:~ owner$ class Paddle(pygame.sprite.Sprite):
+-bash: syntax error near unexpected token `('
+Owner-no-MacBook-Air:~ owner$     def __init__(self):
+-bash: syntax error near unexpected token `('
+Owner-no-MacBook-Air:~ owner$         super().__init__()
+-bash: syntax error near unexpected token `.__init__'
+Owner-no-MacBook-Air:~ owner$         self.image = pygame.Surface([100, 10])
+-bash: syntax error near unexpected token `('
+Owner-no-MacBook-Air:~ owner$         self.image.fill((255, 255, 255))
+-bash: syntax error near unexpected token `('
+Owner-no-MacBook-Air:~ owner$         self.rect = self.image.get_rect()
+-bash: syntax error near unexpected token `('
+Owner-no-MacBook-Air:~ owner$         self.rect.x = 350
+-bash: self.rect.x: command not found
+Owner-no-MacBook-Air:~ owner$         self.rect.y = 550
+-bash: self.rect.y: command not found
+Owner-no-MacBook-Air:~ owner$ 
+Owner-no-MacBook-Air:~ owner$     def update(self):
+-bash: syntax error near unexpected token `('
+Owner-no-MacBook-Air:~ owner$         pos = pygame.mouse.get_pos()
+-bash: syntax error near unexpected token `('
+Owner-no-MacBook-Air:~ owner$         self.rect.x = pos[0] - 50
+-bash: self.rect.x: command not found
+Owner-no-MacBook-Air:~ owner$         if self.rect.x < 0:
+>             self.rect.x = 0
+>         if self.rect.x > 700:
+>             self.rect.x = 700
+> 
+> 
+> class Ball(pygame.sprite.Sprite):
+-bash: syntax error near unexpected token `('
+Owner-no-MacBook-Air:~ owner$     def __init__(self):
+-bash: syntax error near unexpected token `('
+Owner-no-MacBook-Air:~ owner$         super().__init__()
+-bash: syntax error near unexpected token `.__init__'
+Owner-no-MacBook-Air:~ owner$         self.image = pygame.Surface([10, 10])
+-bash: syntax error near unexpected token `('
+Owner-no-MacBook-Air:~ owner$         self.image.fill((255, 255, 255))
+-bash: syntax error near unexpected token `('
+Owner-no-MacBook-Air:~ owner$         self.rect = self.image.get_rect()
+-bash: syntax error near unexpected token `('
+Owner-no-MacBook-Air:~ owner$         self.rect.x = 395
+-bash: self.rect.x: command not found
+Owner-no-MacBook-Air:~ owner$         self.rect.y = 535
+-bash: self.rect.y: command not found
+Owner-no-MacBook-Air:~ owner$         self.speed = [2, -2]
+-bash: self.speed: command not found
+Owner-no-MacBook-Air:~ owner$ 
+Owner-no-MacBook-Air:~ owner$     def update(self):
+-bash: syntax error near unexpected token `('
+Owner-no-MacBook-Air:~ owner$         self.rect.x += self.speed[0]
+-bash: self.rect.x: command not found
+Owner-no-MacBook-Air:~ owner$         self.rect.y += self.speed[1]
+-bash: self.rect.y: command not found
+Owner-no-MacBook-Air:~ owner$ 
+Owner-no-MacBook-Air:~ owner$         if self.rect.x < 0 or self.rect.x > 790:
+>             self.speed[0] = -self.speed[0]
+>         if self.rect.y < 0:
+>             self.speed[1] = -self.speed[1]
+> 
+> 
+> class Block(pygame.sprite.Sprite):
+-bash: syntax error near unexpected token `('
+Owner-no-MacBook-Air:~ owner$     def __init__(self, x, y, level):
+-bash: syntax error near unexpected token `('
+Owner-no-MacBook-Air:~ owner$         super().__init__()
+-bash: syntax error near unexpected token `.__init__'
+Owner-no-MacBook-Air:~ owner$         self.level = level
+-bash: self.level: command not found
+Owner-no-MacBook-Air:~ owner$         self.images = [
+-bash: self.images: command not found
+Owner-no-MacBook-Air:~ owner$             pygame.image.load('normal_face.png'),
+-bash: syntax error near unexpected token `'normal_face.png''
+Owner-no-MacBook-Air:~ owner$             pygame.image.load('distorted_face.png'),
+-bash: syntax error near unexpected token `'distorted_face.png''
+Owner-no-MacBook-Air:~ owner$             pygame.image.load('painful_face.png')
+-bash: syntax error near unexpected token `'painful_face.png''
+Owner-no-MacBook-Air:~ owner$         ]
+-bash: ]: command not found
+Owner-no-MacBook-Air:~ owner$         self.image = self.images[self.level]
+-bash: self.image: command not found
+Owner-no-MacBook-Air:~ owner$         self.rect = self.image.get_rect()
+-bash: syntax error near unexpected token `('
+Owner-no-MacBook-Air:~ owner$         self.rect.x = x
+-bash: self.rect.x: command not found
+Owner-no-MacBook-Air:~ owner$         self.rect.y = y
+-bash: self.rect.y: command not found
+Owner-no-MacBook-Air:~ owner$ 
+Owner-no-MacBook-Air:~ owner$     def hit(self):
+-bash: syntax error near unexpected token `('
+Owner-no-MacBook-Air:~ owner$         self.level -= 1
+-bash: self.level: command not found
+        if self.level < 0:
+            self.kill()
+        else:
+            self.image = self.images[self.level]
+
+# 衝突判定
+def collision_detection(ball, paddle, blocks, score):
+    hit_paddle = pygame.sprite.collide_rect(ball, paddle)
+    if hit_paddle:
+        ball.speed[1] = -ball.speed[1]
+        ball.rect.y = 540
+
+    hit_blocks = pygame.sprite.spritecollide(ball, blocks, False)
+    for block in hit_blocks:
+        score += 10
+        ball.speed[1] = -ball.speed[1]
+        block.hit()
+
+    return score
+
+# スコア計算
+def draw_text(screen, text, size, x, y):
+    font = pygame.font.Font(None, size)
+    text_surface = font.render(text, True, (255, 255, 255))
+    text_rect = text_surface.get_rect()
+    text_rect.x = x
+    text_rect.y = y
+    screen.blit(text_surface, text_rect)
+
+# ゲームオーバーとクリアの判定
+def
+Owner-no-MacBook-Air:~ owner$         if self.level < 0:
+>             self.kill()
+>         else:
+-bash: syntax error near unexpected token `else:'
+Owner-no-MacBook-Air:~ owner$             self.image = self.images[self.level]
+-bash: self.image: command not found
+Owner-no-MacBook-Air:~ owner$ 
+Owner-no-MacBook-Air:~ owner$ # 衝突判定
+Owner-no-MacBook-Air:~ owner$ def collision_detection(ball, paddle, blocks, score):
+-bash: syntax error near unexpected token `('
+Owner-no-MacBook-Air:~ owner$     hit_paddle = pygame.sprite.collide_rect(ball, paddle)
+-bash: syntax error near unexpected token `('
+Owner-no-MacBook-Air:~ owner$     if hit_paddle:
+>         ball.speed[1] = -ball.speed[1]
+>         ball.rect.y = 540
+> 
+>     hit_blocks = pygame.sprite.spritecollide(ball, blocks, False)
+-bash: syntax error near unexpected token `('
+Owner-no-MacBook-Air:~ owner$     for block in hit_blocks:
+>         score += 10
+-bash: syntax error near unexpected token `score'
+Owner-no-MacBook-Air:~ owner$         ball.speed[1] = -ball.speed[1]
+-bash: ball.speed[1]: command not found
+Owner-no-MacBook-Air:~ owner$         block.hit()
+> 
+>     return score
+-bash: syntax error near unexpected token `return'
+Owner-no-MacBook-Air:~ owner$ 
+Owner-no-MacBook-Air:~ owner$ # スコア計算
+Owner-no-MacBook-Air:~ owner$ def draw_text(screen, text, size, x, y):
+-bash: syntax error near unexpected token `('
+Owner-no-MacBook-Air:~ owner$     font = pygame.font.Font(None, size)
+-bash: syntax error near unexpected token `('
+Owner-no-MacBook-Air:~ owner$     text_surface = font.render(text, True, (255, 255, 255))
+-bash: syntax error near unexpected token `('
+Owner-no-MacBook-Air:~ owner$     text_rect = text_surface.get_rect()
+-bash: syntax error near unexpected token `('
+Owner-no-MacBook-Air:~ owner$     text_rect.x = x
+-bash: text_rect.x: command not found
+Owner-no-MacBook-Air:~ owner$     text_rect.y = y
+-bash: text_rect.y: command not found
+Owner-no-MacBook-Air:~ owner$     screen.blit(text_surface, text_rect)
+-bash: syntax error near unexpected token `text_surface,'
+Owner-no-MacBook-Air:~ owner$ 
+Owner-no-MacBook-Air:~ owner$ # ゲームオーバーとクリアの判定
+Owner-no-MacBook-Air:~ owner$ def
+-bash: def: command not found
+Owner-no-MacBook-Air:~ owner$ # ゲームオーバーとクリアの判定
+Owner-no-MacBook-Air:~ owner$ def game_over(screen, ball):
+-bash: syntax error near unexpected token `('
+Owner-no-MacBook-Air:~ owner$     if ball.rect.y > 590:
+>         draw_text(screen, 'GAME OVER', 48, 300, 250)
+-bash: syntax error near unexpected token `screen,'
+Owner-no-MacBook-Air:~ owner$         pygame.display.flip()
+>         pygame.time.wait(2000)
+-bash: syntax error near unexpected token `pygame.time.wait'
+Owner-no-MacBook-Air:~ owner$         return True
+-bash: return: True: numeric argument required
+-bash: return: can only `return' from a function or sourced script
+Owner-no-MacBook-Air:~ owner$     return False
+-bash: return: False: numeric argument required
+-bash: return: can only `return' from a function or sourced script
+Owner-no-MacBook-Air:~ owner$ 
+Owner-no-MacBook-Air:~ owner$ def game_clear(screen, blocks):
+-bash: syntax error near unexpected token `('
+Owner-no-MacBook-Air:~ owner$     if len(blocks) == 0:
+-bash: syntax error near unexpected token `blocks'
+Owner-no-MacBook-Air:~ owner$         draw_text(screen, 'GAME CLEAR!', 48, 280, 250)
+-bash: syntax error near unexpected token `screen,'
+Owner-no-MacBook-Air:~ owner$         pygame.display.flip()
+>         pygame.time.wait(2000)
+-bash: syntax error near unexpected token `pygame.time.wait'
+Owner-no-MacBook-Air:~ owner$         return True
+-bash: return: True: numeric argument required
+-bash: return: can only `return' from a function or sourced script
+Owner-no-MacBook-Air:~ owner$     return False
+-bash: return: False: numeric argument required
+-bash: return: can only `return' from a function or sourced script
+Owner-no-MacBook-Air:~ owner$ 
+Owner-no-MacBook-Air:~ owner$ # ゲームレベルに応じた難易度の調整
+Owner-no-MacBook-Air:~ owner$ def adjust_difficulty(level):
+-bash: syntax error near unexpected token `('
+Owner-no-MacBook-Air:~ owner$     if level < 10:
+>         num_blocks = 5
+>         block_rows = 3
+>     elif level < 20:
+-bash: syntax error near unexpected token `elif'
+Owner-no-MacBook-Air:~ owner$         num_blocks = 8
+-bash: num_blocks: command not found
+Owner-no-MacBook-Air:~ owner$         block_rows = 4
+-bash: block_rows: command not found
+Owner-no-MacBook-Air:~ owner$     else:
+-bash: else:: command not found
+Owner-no-MacBook-Air:~ owner$         num_blocks = 10
+-bash: num_blocks: command not found
+Owner-no-MacBook-Air:~ owner$         block_rows = 5
+-bash: block_rows: command not found
+Owner-no-MacBook-Air:~ owner$     return num_blocks, block_rows
+-bash: return: num_blocks,: numeric argument required
+-bash: return: can only `return' from a function or sourced script
+Owner-no-MacBook-Air:~ owner$ 
+Owner-no-MacBook-Air:~ owner$ # 特殊なアイテム実装
+Owner-no-MacBook-Air:~ owner$ class Item(pygame.sprite.Sprite):
+-bash: syntax error near unexpected token `('
+Owner-no-MacBook-Air:~ owner$     def __init__(self, x, y):
+-bash: syntax error near unexpected token `('
+Owner-no-MacBook-Air:~ owner$         super().__init__()
+-bash: syntax error near unexpected token `.__init__'
+Owner-no-MacBook-Air:~ owner$         self.image = pygame.image.load('item.png')
+-bash: syntax error near unexpected token `('
+Owner-no-MacBook-Air:~ owner$         self.rect = self.image.get_rect()
+-bash: syntax error near unexpected token `('
+Owner-no-MacBook-Air:~ owner$         self.rect.x = x
+-bash: self.rect.x: command not found
+Owner-no-MacBook-Air:~ owner$         self.rect.y = y
+-bash: self.rect.y: command not found
+Owner-no-MacBook-Air:~ owner$         self.speed = 2
+-bash: self.speed: command not found
+Owner-no-MacBook-Air:~ owner$ 
+Owner-no-MacBook-Air:~ owner$     def update(self):
+-bash: syntax error near unexpected token `('
+Owner-no-MacBook-Air:~ owner$         self.rect.y += self.speed
+-bash: self.rect.y: command not found
+Owner-no-MacBook-Air:~ owner$ 
+Owner-no-MacBook-Air:~ owner$ def create_items(blocks, items):
+-bash: syntax error near unexpected token `('
+Owner-no-MacBook-Air:~ owner$     for block in blocks:
+>         if random.random() < 0.1:
+-bash: syntax error near unexpected token `if'
+Owner-no-MacBook-Air:~ owner$             item = Item(block.rect.x, block.rect.y)
+-bash: syntax error near unexpected token `('
+Owner-no-MacBook-Air:~ owner$             items.add(item)
+-bash: syntax error near unexpected token `item'
+Owner-no-MacBook-Air:~ owner$ 
+Owner-no-MacBook-Air:~ owner$ def upgrade_paddle(paddle):
+-bash: syntax error near unexpected token `('
+Owner-no-MacBook-Air:~ owner$     paddle.image = pygame.Surface([150, 10])
+-bash: syntax error near unexpected token `('
+Owner-no-MacBook-Air:~ owner$     paddle.image.fill((255, 255, 255))
+-bash: syntax error near unexpected token `('
+Owner-no-MacBook-Air:~ owner$     paddle.rect.width = 150
+-bash: paddle.rect.width: command not found
+Owner-no-MacBook-Air:~ owner$ 
+Owner-no-MacBook-Air:~ owner$ # メインゲームループ
+Owner-no-MacBook-Air:~ owner$ level = 0
+-bash: level: command not found
+Owner-no-MacBook-Air:~ owner$ while True:
+>     num_blocks, block_rows = adjust_difficulty(level)
+-bash: syntax error near unexpected token `('
+Owner-no-MacBook-Air:~ owner$     paddle = Paddle()
+-bash: syntax error near unexpected token `('
+Owner-no-MacBook-Air:~ owner$     ball = Ball()
+-bash: syntax error near unexpected token `('
+Owner-no-MacBook-Air:~ owner$ 
+Owner-no-MacBook-Air:~ owner$     blocks = pygame.sprite.Group()
+-bash: syntax error near unexpected token `('
+Owner-no-MacBook-Air:~ owner$     for i in range(block_rows):
+-bash: syntax error near unexpected token `('
+Owner-no-MacBook-Air:~ owner$         for j in range(num_blocks):
+-bash: syntax error near unexpected token `('
+Owner-no-MacBook-Air:~ owner$             block = Block(20 + j * 76, 40 + i * 40, 2)
+-bash: syntax error near unexpected token `('
+Owner-no-MacBook-Air:~ owner$             blocks.add(block)
+-bash: syntax error near unexpected token `block'
+Owner-no-MacBook-Air:~ owner$ 
+Owner-no-MacBook-Air:~ owner$     items = pygame.sprite.Group()
+-bash: syntax error near unexpected token `('
+Owner-no-MacBook-Air:~ owner$     create_items(blocks, items)
+-bash: syntax error near unexpected token `blocks,'
+
+    paddle_sprites = pygame.sprite.Group()
+    paddle_sprites.add(paddle)
+
+    ball_sprites = pygame.sprite.Group()
+    ball_sprites.add(ball)
+
+    score = 0
+    while True:
+        clock.tick(60)
+        screen.fill((0, 0, 0))
+
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                pygame.quit()
+                sys.exit()
+
+        paddle_sprites.update()
+        ball_sprites.update()
+        items.update()
+
+        score = collision_detection(ball, paddle, blocks, score)
+        draw_text(screen, f'Score: {score}', 18, 10, 10)
+
+        paddle_sprites.draw(screen)
+        ball_sprites.draw(screen)
+        blocks.draw(screen)
+        items.draw(screen)
+
+        pygame.display.flip()
+
+        if game_over(screen, ball):
+            break
+
+        if game_clear(screen, blocks):
+            level += 1
+            break
+
+        # 特殊アイテムの衝突判定
+Owner-no-MacBook-Air:~ owner$ te.spritecollide(paddle, items, True)
+Owner-no-MacBook-Air:~ owner$     paddle_sprites = pygame.sprite.Group()
+-bash: syntax error near unexpected token `('
+Owner-no-MacBook-Air:~ owner$     paddle_sprites.add(paddle)
+-bash: syntax error near unexpected token `paddle'
+Owner-no-MacBook-Air:~ owner$ 
+Owner-no-MacBook-Air:~ owner$     ball_sprites = pygame.sprite.Group()
+-bash: syntax error near unexpected token `('
+Owner-no-MacBook-Air:~ owner$     ball_sprites.add(ball)
+-bash: syntax error near unexpected token `ball'
+Owner-no-MacBook-Air:~ owner$ 
+Owner-no-MacBook-Air:~ owner$     score = 0
+-bash: score: command not found
+Owner-no-MacBook-Air:~ owner$     while True:
+>         clock.tick(60)
+-bash: syntax error near unexpected token `60'
+Owner-no-MacBook-Air:~ owner$         screen.fill((0, 0, 0))
+-bash: syntax error near unexpected token `('
+Owner-no-MacBook-Air:~ owner$ 
+Owner-no-MacBook-Air:~ owner$         for event in pygame.event.get():
+-bash: syntax error near unexpected token `('
+Owner-no-MacBook-Air:~ owner$             if event.type == pygame.QUIT:
+>                 pygame.quit()
+>                 sys.exit()
+-bash: syntax error near unexpected token `sys.exit'
+Owner-no-MacBook-Air:~ owner$ 
+Owner-no-MacBook-Air:~ owner$         paddle_sprites.update()
+>         ball_sprites.update()
+-bash: syntax error near unexpected token `ball_sprites.update'
+Owner-no-MacBook-Air:~ owner$         items.update()
+> 
+>         score = collision_detection(ball, paddle, blocks, score)
+-bash: syntax error near unexpected token `score'
+Owner-no-MacBook-Air:~ owner$         draw_text(screen, f'Score: {score}', 18, 10, 10)
+-bash: syntax error near unexpected token `screen,'
+Owner-no-MacBook-Air:~ owner$ 
+Owner-no-MacBook-Air:~ owner$         paddle_sprites.draw(screen)
+-bash: syntax error near unexpected token `screen'
+Owner-no-MacBook-Air:~ owner$         ball_sprites.draw(screen)
+-bash: syntax error near unexpected token `screen'
+Owner-no-MacBook-Air:~ owner$         blocks.draw(screen)
+-bash: syntax error near unexpected token `screen'
+Owner-no-MacBook-Air:~ owner$         items.draw(screen)
+-bash: syntax error near unexpected token `screen'
+Owner-no-MacBook-Air:~ owner$ 
+Owner-no-MacBook-Air:~ owner$         pygame.display.flip()
+> 
+>         if game_over(screen, ball):
+-bash: syntax error near unexpected token `screen,'
+Owner-no-MacBook-Air:~ owner$             break
+-bash: break: only meaningful in a `for', `while', or `until' loop
+Owner-no-MacBook-Air:~ owner$ 
+Owner-no-MacBook-Air:~ owner$         if game_clear(screen, blocks):
+-bash: syntax error near unexpected token `screen,'
+Owner-no-MacBook-Air:~ owner$             level += 1
+-bash: level: command not found
+Owner-no-MacBook-Air:~ owner$             break
+-bash: break: only meaningful in a `for', `while', or `until' loop
+Owner-no-MacBook-Air:~ owner$ 
+Owner-no-MacBook-Air:~ owner$         # 特殊アイテムの衝突判定
+Owner-no-MacBook-Air:~ owner$         hit_item = pygame.sprite.spritecollide(paddle, items, True)
+-bash: syntax error near unexpected token `('
+Owner-no-MacBook-Air:~ owner$         if hit_item:
+>             upgrade_paddle(paddle)
+-bash: syntax error near unexpected token `paddle'
+Owner-no-MacBook-Air:~ owner$ python breakout.py
+-bash: python: command not found
+Owner-no-MacBook-Air:~ owner$ python3 breakout.py
+/Library/Frameworks/Python.framework/Versions/3.11/Resources/Python.app/Contents/MacOS/Python: can't open file '/Users/owner/breakout.py': [Errno 2] No such file or directory
+python breakout.py
+pip install pygame
+
